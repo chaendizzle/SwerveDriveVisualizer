@@ -334,10 +334,10 @@
                                 center + movement.x * center * 0.25, center + movement.y * center * 0.25)
 
                             if (Math.abs(movement.x) > 0.0001) {
-                                this.movement.x = +movement.x.toFixed(3) / 4.0;
+                                this.movement.x = +(movement.x / 4.0).toFixed(3);
                             }
                             if (Math.abs(movement.y) > 0.0001) {
-                                this.movement.y = +movement.y.toFixed(3) / 4.0;
+                                this.movement.y = +(movement.y / 4.0).toFixed(3);
                             }
                         }
 
@@ -356,7 +356,7 @@
                             ctx.stroke();
                             canvas_arrow(ctx, center + center * 0.25, center,
                                 center + center * 0.25, center - Math.sign(torque))
-                            this.torque = +torque.toFixed(3) / (Math.sqrt(2) * 2.0);
+                            this.torque = +(torque / (Math.sqrt(2) * 2.0)).toFixed(3);
                         }
                     }
                 }
